@@ -1,0 +1,7 @@
+
+State Machine - |Elevator|state
+Name state.STOPPED state.MOVING_DOWN state.MOVING_UP state.IDLE 
+state.IDLE 0 0 0 0 
+state.MOVING_UP 0 0 1 1 
+state.MOVING_DOWN 0 1 0 1 
+state.STOPPED 1 0 0 1 

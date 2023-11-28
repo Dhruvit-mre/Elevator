@@ -1,0 +1,1214 @@
+TimeQuest Timing Analyzer report for Elevator
+Thu Nov 09 13:50:39 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'reset'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'reset'
+ 15. Slow Model Recovery: 'clk'
+ 16. Slow Model Removal: 'clk'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'reset'
+ 19. Setup Times
+ 20. Hold Times
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'reset'
+ 29. Fast Model Setup: 'clk'
+ 30. Fast Model Hold: 'clk'
+ 31. Fast Model Hold: 'reset'
+ 32. Fast Model Recovery: 'clk'
+ 33. Fast Model Removal: 'clk'
+ 34. Fast Model Minimum Pulse Width: 'clk'
+ 35. Fast Model Minimum Pulse Width: 'reset'
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Setup Transfers
+ 46. Hold Transfers
+ 47. Recovery Transfers
+ 48. Removal Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Elevator                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }   ;
+; reset      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { reset } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 362.32 MHz ; 362.32 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; reset ; -1.821 ; -6.808        ;
+; clk   ; -1.760 ; -11.907       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
+; reset ; 1.402 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Slow Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.257 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Removal Summary     ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.051 ; -0.301        ;
++-------+--------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -13.222               ;
+; reset ; -1.222 ; -1.222                ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'reset'                                                                                         ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.821 ; floor_pos_reg[0] ; floor_pos[0]~1  ; clk          ; reset       ; 0.500        ; -0.417     ; 0.945      ;
+; -1.813 ; floor_pos_reg[2] ; floor_pos[2]~9  ; clk          ; reset       ; 0.500        ; -0.412     ; 0.916      ;
+; -1.787 ; floor_pos_reg[3] ; floor_pos[3]~13 ; clk          ; reset       ; 0.500        ; -0.415     ; 0.911      ;
+; -1.387 ; floor_pos_reg[1] ; floor_pos[1]~5  ; clk          ; reset       ; 0.500        ; -0.185     ; 0.717      ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                       ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -1.760 ; floor_pos_reg[3]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 2.796      ;
+; -1.724 ; floor_pos_reg[3]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 2.760      ;
+; -1.656 ; floor_pos_reg[1]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.232      ; 2.924      ;
+; -1.653 ; floor_pos_reg[1]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.232      ; 2.921      ;
+; -1.626 ; floor_pos_reg[2]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 2.662      ;
+; -1.608 ; floor_pos_reg[0]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 2.644      ;
+; -1.605 ; floor_pos_reg[0]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 2.641      ;
+; -1.590 ; floor_pos_reg[2]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 2.626      ;
+; -1.470 ; floor_pos_reg[1]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.236      ; 2.742      ;
+; -1.466 ; floor_pos_reg[3]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.232     ; 2.270      ;
+; -1.422 ; floor_pos_reg[0]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.004      ; 2.462      ;
+; -1.418 ; floor_pos_reg[3]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.004      ; 2.458      ;
+; -1.340 ; floor_pos_reg[2]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.004      ; 2.380      ;
+; -1.332 ; floor_pos_reg[2]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.232     ; 2.136      ;
+; -1.292 ; floor_pos_reg[2]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.328      ;
+; -1.257 ; floor_pos_reg[3]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.293      ;
+; -1.257 ; floor_pos_reg[3]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.293      ;
+; -1.253 ; floor_pos_reg[3]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.289      ;
+; -1.252 ; state.MOVING_DOWN ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 2.288      ;
+; -1.216 ; state.MOVING_DOWN ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 2.252      ;
+; -1.207 ; state.MOVING_UP   ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; -0.004     ; 2.239      ;
+; -1.184 ; state.MOVING_DOWN ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.220      ;
+; -1.177 ; state.MOVING_DOWN ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.213      ;
+; -1.171 ; state.MOVING_UP   ; state.STOPPED              ; clk          ; clk         ; 1.000        ; -0.004     ; 2.203      ;
+; -1.123 ; floor_pos_reg[2]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.159      ;
+; -1.119 ; floor_pos_reg[2]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.155      ;
+; -1.059 ; floor_pos_reg[1]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; 0.000      ; 2.095      ;
+; -1.009 ; floor_pos_reg[0]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.232     ; 1.813      ;
+; -0.883 ; state.STOPPED     ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.232     ; 1.687      ;
+; -0.880 ; floor_pos_reg[1]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.232      ; 2.148      ;
+; -0.879 ; floor_pos_reg[0]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.915      ;
+; -0.870 ; floor_pos_reg[1]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.232      ; 2.138      ;
+; -0.867 ; floor_pos_reg[0]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.903      ;
+; -0.847 ; state.STOPPED     ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.004      ; 1.887      ;
+; -0.846 ; floor_pos_reg[1]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.232      ; 2.114      ;
+; -0.836 ; state.IDLE        ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.872      ;
+; -0.796 ; floor_pos_reg[0]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.832      ;
+; -0.770 ; state.STOPPED     ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.806      ;
+; -0.737 ; state.STOPPED     ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.773      ;
+; -0.685 ; state.MOVING_DOWN ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.232     ; 1.489      ;
+; -0.674 ; floor_pos_reg[2]  ; floor_pos[2]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.232     ; 1.478      ;
+; -0.674 ; state.STOPPED     ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.710      ;
+; -0.674 ; state.STOPPED     ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.710      ;
+; -0.670 ; state.STOPPED     ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.706      ;
+; -0.627 ; state.IDLE        ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.232      ; 1.895      ;
+; -0.627 ; state.IDLE        ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.232      ; 1.895      ;
+; -0.623 ; state.IDLE        ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.232      ; 1.891      ;
+; -0.513 ; state.STOPPED     ; state.IDLE                 ; clk          ; clk         ; 1.000        ; -0.232     ; 1.317      ;
+; -0.448 ; state.IDLE        ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.236      ; 1.720      ;
+; -0.222 ; floor_pos_reg[0]  ; floor_pos[0]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.232     ; 1.026      ;
+; -0.193 ; floor_pos_reg[3]  ; floor_pos[3]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.232     ; 0.997      ;
+; -0.083 ; floor_pos_reg[1]  ; floor_pos[1]~reg0_emulated ; clk          ; clk         ; 1.000        ; 0.000      ; 1.119      ;
+; 0.085  ; floor_pos[0]~1    ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.185      ; 0.636      ;
+; 0.085  ; floor_pos[3]~13   ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.183      ; 0.634      ;
+; 0.092  ; floor_pos[2]~9    ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.180      ; 0.624      ;
+; 0.229  ; floor_pos[1]~5    ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.185      ; 0.492      ;
+; 0.379  ; state.MOVING_UP   ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; state.IDLE        ; state.IDLE                 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                       ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; floor_pos_reg[2]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; floor_pos_reg[3]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; state.IDLE        ; state.IDLE                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; state.MOVING_UP   ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; state.MOVING_DOWN ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; floor_pos_reg[1]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; floor_pos_reg[0]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.541 ; floor_pos[1]~5    ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.185      ; 0.492      ;
+; 0.678 ; floor_pos[2]~9    ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.180      ; 0.624      ;
+; 0.685 ; floor_pos[0]~1    ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.185      ; 0.636      ;
+; 0.685 ; floor_pos[3]~13   ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.183      ; 0.634      ;
+; 0.853 ; floor_pos_reg[1]  ; floor_pos[1]~reg0_emulated ; clk          ; clk         ; 0.000        ; 0.000      ; 1.119      ;
+; 0.963 ; floor_pos_reg[3]  ; floor_pos[3]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.232     ; 0.997      ;
+; 0.992 ; floor_pos_reg[0]  ; floor_pos[0]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.232     ; 1.026      ;
+; 1.218 ; state.IDLE        ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.236      ; 1.720      ;
+; 1.229 ; state.MOVING_UP   ; state.STOPPED              ; clk          ; clk         ; 0.000        ; -0.004     ; 1.491      ;
+; 1.232 ; state.MOVING_UP   ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; -0.004     ; 1.494      ;
+; 1.264 ; floor_pos_reg[0]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.232     ; 1.298      ;
+; 1.283 ; state.STOPPED     ; state.IDLE                 ; clk          ; clk         ; 0.000        ; -0.232     ; 1.317      ;
+; 1.362 ; state.STOPPED     ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.628      ;
+; 1.393 ; state.IDLE        ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.232      ; 1.891      ;
+; 1.395 ; floor_pos_reg[0]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.004      ; 1.665      ;
+; 1.397 ; state.IDLE        ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.232      ; 1.895      ;
+; 1.397 ; state.IDLE        ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.232      ; 1.895      ;
+; 1.440 ; state.STOPPED     ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.706      ;
+; 1.444 ; floor_pos_reg[2]  ; floor_pos[2]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.232     ; 1.478      ;
+; 1.444 ; state.STOPPED     ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.710      ;
+; 1.444 ; state.STOPPED     ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.710      ;
+; 1.445 ; floor_pos_reg[1]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.236      ; 1.947      ;
+; 1.452 ; floor_pos_reg[2]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.004      ; 1.722      ;
+; 1.455 ; state.MOVING_DOWN ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.232     ; 1.489      ;
+; 1.479 ; state.MOVING_DOWN ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.745      ;
+; 1.540 ; state.STOPPED     ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.806      ;
+; 1.570 ; floor_pos_reg[0]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.836      ;
+; 1.570 ; floor_pos_reg[0]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.836      ;
+; 1.586 ; floor_pos_reg[3]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.004      ; 1.856      ;
+; 1.606 ; state.IDLE        ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.872      ;
+; 1.616 ; floor_pos_reg[1]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.232      ; 2.114      ;
+; 1.617 ; state.STOPPED     ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.004      ; 1.887      ;
+; 1.620 ; floor_pos_reg[1]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.232      ; 2.118      ;
+; 1.620 ; floor_pos_reg[1]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.232      ; 2.118      ;
+; 1.653 ; state.STOPPED     ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.232     ; 1.687      ;
+; 1.800 ; floor_pos_reg[0]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.066      ;
+; 1.849 ; floor_pos_reg[1]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.232      ; 2.347      ;
+; 1.889 ; floor_pos_reg[2]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.155      ;
+; 1.893 ; floor_pos_reg[2]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.159      ;
+; 1.947 ; state.MOVING_DOWN ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.213      ;
+; 1.948 ; floor_pos_reg[0]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.214      ;
+; 1.954 ; state.MOVING_DOWN ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.220      ;
+; 1.997 ; floor_pos_reg[1]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.232      ; 2.495      ;
+; 2.023 ; floor_pos_reg[3]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.289      ;
+; 2.027 ; floor_pos_reg[3]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.293      ;
+; 2.102 ; floor_pos_reg[2]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.232     ; 2.136      ;
+; 2.167 ; floor_pos_reg[2]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.178 ; floor_pos_reg[3]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.178 ; floor_pos_reg[3]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.236 ; floor_pos_reg[3]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.232     ; 2.270      ;
+; 2.240 ; floor_pos_reg[2]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.506      ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'reset'                                                                                         ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 1.402 ; floor_pos_reg[1] ; floor_pos[1]~5  ; clk          ; reset       ; -0.500       ; -0.185     ; 0.717      ;
+; 1.826 ; floor_pos_reg[3] ; floor_pos[3]~13 ; clk          ; reset       ; -0.500       ; -0.415     ; 0.911      ;
+; 1.828 ; floor_pos_reg[2] ; floor_pos[2]~9  ; clk          ; reset       ; -0.500       ; -0.412     ; 0.916      ;
+; 1.862 ; floor_pos_reg[0] ; floor_pos[0]~1  ; clk          ; reset       ; -0.500       ; -0.417     ; 0.945      ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                           ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.257 ; reset     ; state.IDLE                 ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.257 ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.257 ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.257 ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.257 ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.257 ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.500        ; 2.069      ; 2.348      ;
+; 0.320 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 0.500        ; 2.301      ; 2.517      ;
+; 0.320 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 0.500        ; 2.301      ; 2.517      ;
+; 0.320 ; reset     ; state.STOPPED              ; reset        ; clk         ; 0.500        ; 2.301      ; 2.517      ;
+; 0.320 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 0.500        ; 2.301      ; 2.517      ;
+; 0.320 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 0.500        ; 2.301      ; 2.517      ;
+; 0.321 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 0.500        ; 2.305      ; 2.520      ;
+; 0.757 ; reset     ; state.IDLE                 ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.757 ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.757 ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.757 ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.757 ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.757 ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 1.000        ; 2.069      ; 2.348      ;
+; 0.820 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 1.000        ; 2.301      ; 2.517      ;
+; 0.820 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 1.000        ; 2.301      ; 2.517      ;
+; 0.820 ; reset     ; state.STOPPED              ; reset        ; clk         ; 1.000        ; 2.301      ; 2.517      ;
+; 0.820 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 1.000        ; 2.301      ; 2.517      ;
+; 0.820 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 1.000        ; 2.301      ; 2.517      ;
+; 0.821 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 1.000        ; 2.305      ; 2.520      ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                             ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.051 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 0.000        ; 2.305      ; 2.520      ;
+; -0.050 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 0.000        ; 2.301      ; 2.517      ;
+; -0.050 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 0.000        ; 2.301      ; 2.517      ;
+; -0.050 ; reset     ; state.STOPPED              ; reset        ; clk         ; 0.000        ; 2.301      ; 2.517      ;
+; -0.050 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 0.000        ; 2.301      ; 2.517      ;
+; -0.050 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 0.000        ; 2.301      ; 2.517      ;
+; 0.013  ; reset     ; state.IDLE                 ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.013  ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.013  ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.013  ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.013  ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.013  ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.000        ; 2.069      ; 2.348      ;
+; 0.449  ; reset     ; state.MOVING_UP            ; reset        ; clk         ; -0.500       ; 2.305      ; 2.520      ;
+; 0.450  ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; -0.500       ; 2.301      ; 2.517      ;
+; 0.450  ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; -0.500       ; 2.301      ; 2.517      ;
+; 0.450  ; reset     ; state.STOPPED              ; reset        ; clk         ; -0.500       ; 2.301      ; 2.517      ;
+; 0.450  ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; -0.500       ; 2.301      ; 2.517      ;
+; 0.450  ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; -0.500       ; 2.301      ; 2.517      ;
+; 0.513  ; reset     ; state.IDLE                 ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
+; 0.513  ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
+; 0.513  ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
+; 0.513  ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
+; 0.513  ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
+; 0.513  ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; -0.500       ; 2.069      ; 2.348      ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[0]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[0]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[1]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[1]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[2]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[2]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[3]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[3]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.IDLE                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.IDLE                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_DOWN              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_DOWN              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_UP                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_UP                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.STOPPED                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.STOPPED                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[0]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[0]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[1]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[1]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[2]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[2]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[3]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[3]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.IDLE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.IDLE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_DOWN|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_DOWN|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_UP|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_UP|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.STOPPED|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.STOPPED|clk              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'reset'                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; reset ; Rise       ; reset                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[0]~1        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[0]~1        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[0]~1|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[0]~1|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[1]~5        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[1]~5        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[1]~5|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[1]~5|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[2]~9        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[2]~9        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[2]~9|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[2]~9|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[3]~13       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[3]~13       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[3]~13|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[3]~13|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; reset|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; reset|combout         ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_req[*]  ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; 3.495 ; 3.495 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; 3.761 ; 3.761 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; 3.201 ; 3.201 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_req[*]  ; clk        ; -1.843 ; -1.843 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; -2.128 ; -2.128 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; -2.497 ; -2.497 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; -2.350 ; -2.350 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; -1.843 ; -1.843 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 10.665 ; 10.665 ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 9.030  ; 9.030  ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 10.589 ; 10.589 ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 10.665 ; 10.665 ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 12.932 ; 12.932 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 11.637 ; 11.637 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 12.868 ; 12.868 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 12.932 ; 12.932 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 12.421 ; 12.421 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 12.932 ; 12.932 ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 11.637 ; 11.637 ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 12.868 ; 12.868 ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 12.932 ; 12.932 ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 12.421 ; 12.421 ; Fall       ; reset           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 8.871  ; 8.871  ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 8.871  ; 8.871  ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 9.901  ; 9.901  ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 9.668  ; 9.668  ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 9.164  ; 9.164  ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 11.637 ; 11.637 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 11.637 ; 11.637 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 12.868 ; 12.868 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 12.932 ; 12.932 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 12.421 ; 12.421 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 8.360  ; 8.360  ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 8.360  ; 8.360  ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 9.721  ; 9.721  ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 9.332  ; 9.332  ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 8.829  ; 8.829  ; Fall       ; reset           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; reset ; -0.644 ; -2.326        ;
+; clk   ; -0.235 ; -0.663        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
+; reset ; 1.028 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.368 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Removal Summary     ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.032 ; -0.192        ;
++-------+--------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -13.222               ;
+; reset ; -1.222 ; -1.222                ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'reset'                                                                                         ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.644 ; floor_pos_reg[0] ; floor_pos[0]~1  ; clk          ; reset       ; 0.500        ; -0.281     ; 0.464      ;
+; -0.627 ; floor_pos_reg[2] ; floor_pos[2]~9  ; clk          ; reset       ; 0.500        ; -0.274     ; 0.446      ;
+; -0.621 ; floor_pos_reg[3] ; floor_pos[3]~13 ; clk          ; reset       ; 0.500        ; -0.277     ; 0.442      ;
+; -0.434 ; floor_pos_reg[1] ; floor_pos[1]~5  ; clk          ; reset       ; 0.500        ; -0.173     ; 0.355      ;
++--------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                       ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.235 ; floor_pos_reg[3]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.267      ;
+; -0.216 ; floor_pos_reg[3]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.248      ;
+; -0.185 ; floor_pos_reg[2]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.217      ;
+; -0.182 ; floor_pos_reg[1]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.107      ; 1.321      ;
+; -0.180 ; floor_pos_reg[1]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.107      ; 1.319      ;
+; -0.166 ; floor_pos_reg[2]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.198      ;
+; -0.165 ; floor_pos_reg[0]  ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.197      ;
+; -0.163 ; floor_pos_reg[0]  ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.195      ;
+; -0.087 ; floor_pos_reg[1]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.110      ; 1.229      ;
+; -0.087 ; floor_pos_reg[3]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.107     ; 1.012      ;
+; -0.070 ; floor_pos_reg[0]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.003      ; 1.105      ;
+; -0.046 ; floor_pos_reg[3]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.003      ; 1.081      ;
+; -0.038 ; floor_pos_reg[2]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.070      ;
+; -0.037 ; floor_pos_reg[2]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.107     ; 0.962      ;
+; -0.026 ; floor_pos_reg[2]  ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.003      ; 1.061      ;
+; -0.021 ; state.MOVING_DOWN ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.053      ;
+; -0.001 ; state.MOVING_DOWN ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 1.033      ;
+; 0.004  ; floor_pos_reg[3]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.004  ; floor_pos_reg[3]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.007  ; floor_pos_reg[3]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.025      ;
+; 0.016  ; state.MOVING_UP   ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; -0.003     ; 1.013      ;
+; 0.027  ; state.MOVING_DOWN ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.005      ;
+; 0.032  ; state.MOVING_DOWN ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.000      ;
+; 0.036  ; state.MOVING_UP   ; state.STOPPED              ; clk          ; clk         ; 1.000        ; -0.003     ; 0.993      ;
+; 0.054  ; floor_pos_reg[2]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.978      ;
+; 0.057  ; floor_pos_reg[2]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.975      ;
+; 0.081  ; floor_pos_reg[1]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.951      ;
+; 0.100  ; floor_pos_reg[0]  ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.107     ; 0.825      ;
+; 0.134  ; floor_pos_reg[1]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.107      ; 1.005      ;
+; 0.135  ; floor_pos_reg[1]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.107      ; 1.004      ;
+; 0.151  ; state.STOPPED     ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.107     ; 0.774      ;
+; 0.151  ; floor_pos_reg[0]  ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.881      ;
+; 0.152  ; floor_pos_reg[0]  ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.880      ;
+; 0.166  ; state.STOPPED     ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.003      ; 0.869      ;
+; 0.175  ; floor_pos_reg[1]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.107      ; 0.964      ;
+; 0.178  ; state.IDLE        ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.854      ;
+; 0.194  ; floor_pos_reg[0]  ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.838      ;
+; 0.198  ; state.STOPPED     ; state.MOVING_DOWN          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.834      ;
+; 0.214  ; state.STOPPED     ; state.STOPPED              ; clk          ; clk         ; 1.000        ; 0.000      ; 0.818      ;
+; 0.231  ; floor_pos_reg[2]  ; floor_pos[2]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.107     ; 0.694      ;
+; 0.234  ; state.MOVING_DOWN ; floor_pos_reg[1]           ; clk          ; clk         ; 1.000        ; -0.107     ; 0.691      ;
+; 0.242  ; state.STOPPED     ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.790      ;
+; 0.242  ; state.STOPPED     ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.790      ;
+; 0.245  ; state.STOPPED     ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.000      ; 0.787      ;
+; 0.269  ; state.IDLE        ; floor_pos_reg[2]           ; clk          ; clk         ; 1.000        ; 0.107      ; 0.870      ;
+; 0.269  ; state.IDLE        ; floor_pos_reg[3]           ; clk          ; clk         ; 1.000        ; 0.107      ; 0.870      ;
+; 0.272  ; state.IDLE        ; floor_pos_reg[0]           ; clk          ; clk         ; 1.000        ; 0.107      ; 0.867      ;
+; 0.302  ; state.STOPPED     ; state.IDLE                 ; clk          ; clk         ; 1.000        ; -0.107     ; 0.623      ;
+; 0.357  ; state.IDLE        ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.110      ; 0.785      ;
+; 0.421  ; floor_pos_reg[0]  ; floor_pos[0]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.107     ; 0.504      ;
+; 0.432  ; floor_pos[3]~13   ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.170      ; 0.270      ;
+; 0.434  ; floor_pos[0]~1    ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.174      ; 0.272      ;
+; 0.435  ; floor_pos[2]~9    ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.167      ; 0.264      ;
+; 0.439  ; floor_pos_reg[3]  ; floor_pos[3]~reg0_emulated ; clk          ; clk         ; 1.000        ; -0.107     ; 0.486      ;
+; 0.490  ; floor_pos_reg[1]  ; floor_pos[1]~reg0_emulated ; clk          ; clk         ; 1.000        ; 0.000      ; 0.542      ;
+; 0.490  ; floor_pos[1]~5    ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.500        ; 0.173      ; 0.215      ;
+; 0.665  ; state.MOVING_UP   ; state.MOVING_UP            ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; state.IDLE        ; state.IDLE                 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
++--------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                       ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; floor_pos_reg[2]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; floor_pos_reg[3]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.IDLE        ; state.IDLE                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.MOVING_UP   ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.MOVING_DOWN ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; floor_pos_reg[1]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; floor_pos_reg[0]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.390 ; floor_pos_reg[1]  ; floor_pos[1]~reg0_emulated ; clk          ; clk         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.390 ; floor_pos[1]~5    ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.173      ; 0.215      ;
+; 0.441 ; floor_pos_reg[3]  ; floor_pos[3]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.107     ; 0.486      ;
+; 0.445 ; floor_pos[2]~9    ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.167      ; 0.264      ;
+; 0.446 ; floor_pos[0]~1    ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.174      ; 0.272      ;
+; 0.448 ; floor_pos[3]~13   ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; -0.500       ; 0.170      ; 0.270      ;
+; 0.459 ; floor_pos_reg[0]  ; floor_pos[0]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.107     ; 0.504      ;
+; 0.523 ; state.IDLE        ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.110      ; 0.785      ;
+; 0.547 ; state.MOVING_UP   ; state.STOPPED              ; clk          ; clk         ; 0.000        ; -0.003     ; 0.696      ;
+; 0.549 ; state.MOVING_UP   ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; -0.003     ; 0.698      ;
+; 0.578 ; state.STOPPED     ; state.IDLE                 ; clk          ; clk         ; 0.000        ; -0.107     ; 0.623      ;
+; 0.578 ; floor_pos_reg[0]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.107     ; 0.623      ;
+; 0.592 ; state.STOPPED     ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.744      ;
+; 0.608 ; state.IDLE        ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.867      ;
+; 0.611 ; state.IDLE        ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.870      ;
+; 0.611 ; state.IDLE        ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.870      ;
+; 0.613 ; floor_pos_reg[0]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.768      ;
+; 0.632 ; floor_pos_reg[2]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.787      ;
+; 0.632 ; floor_pos_reg[1]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.110      ; 0.894      ;
+; 0.635 ; state.STOPPED     ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.638 ; state.STOPPED     ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.638 ; state.STOPPED     ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.646 ; state.MOVING_DOWN ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.107     ; 0.691      ;
+; 0.649 ; floor_pos_reg[2]  ; floor_pos[2]~reg0_emulated ; clk          ; clk         ; 0.000        ; -0.107     ; 0.694      ;
+; 0.669 ; state.MOVING_DOWN ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.682 ; state.STOPPED     ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.834      ;
+; 0.682 ; floor_pos_reg[3]  ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.837      ;
+; 0.689 ; floor_pos_reg[0]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689 ; floor_pos_reg[0]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.841      ;
+; 0.702 ; state.IDLE        ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.705 ; floor_pos_reg[1]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.964      ;
+; 0.708 ; floor_pos_reg[1]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.967      ;
+; 0.708 ; floor_pos_reg[1]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.107      ; 0.967      ;
+; 0.714 ; state.STOPPED     ; state.MOVING_UP            ; clk          ; clk         ; 0.000        ; 0.003      ; 0.869      ;
+; 0.729 ; state.STOPPED     ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.107     ; 0.774      ;
+; 0.778 ; floor_pos_reg[0]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.797 ; floor_pos_reg[1]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.107      ; 1.056      ;
+; 0.823 ; floor_pos_reg[2]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.975      ;
+; 0.826 ; floor_pos_reg[2]  ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.978      ;
+; 0.848 ; state.MOVING_DOWN ; floor_pos_reg[3]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.000      ;
+; 0.853 ; state.MOVING_DOWN ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.005      ;
+; 0.855 ; floor_pos_reg[0]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.007      ;
+; 0.873 ; floor_pos_reg[3]  ; floor_pos_reg[0]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.025      ;
+; 0.874 ; floor_pos_reg[1]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.107      ; 1.133      ;
+; 0.876 ; floor_pos_reg[3]  ; floor_pos_reg[2]           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.028      ;
+; 0.917 ; floor_pos_reg[2]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.107     ; 0.962      ;
+; 0.939 ; floor_pos_reg[3]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.091      ;
+; 0.945 ; floor_pos_reg[2]  ; state.STOPPED              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.097      ;
+; 0.952 ; floor_pos_reg[3]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.967 ; floor_pos_reg[3]  ; floor_pos_reg[1]           ; clk          ; clk         ; 0.000        ; -0.107     ; 1.012      ;
+; 0.971 ; floor_pos_reg[2]  ; state.MOVING_DOWN          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.123      ;
++-------+-------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'reset'                                                                                         ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 1.028 ; floor_pos_reg[1] ; floor_pos[1]~5  ; clk          ; reset       ; -0.500       ; -0.173     ; 0.355      ;
+; 1.219 ; floor_pos_reg[3] ; floor_pos[3]~13 ; clk          ; reset       ; -0.500       ; -0.277     ; 0.442      ;
+; 1.220 ; floor_pos_reg[2] ; floor_pos[2]~9  ; clk          ; reset       ; -0.500       ; -0.274     ; 0.446      ;
+; 1.245 ; floor_pos_reg[0] ; floor_pos[0]~1  ; clk          ; reset       ; -0.500       ; -0.281     ; 0.464      ;
++-------+------------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                           ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.368 ; reset     ; state.IDLE                 ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.368 ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.368 ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.368 ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.368 ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.368 ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.500        ; 1.148      ; 1.312      ;
+; 0.412 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 0.500        ; 1.255      ; 1.375      ;
+; 0.412 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 0.500        ; 1.255      ; 1.375      ;
+; 0.412 ; reset     ; state.STOPPED              ; reset        ; clk         ; 0.500        ; 1.255      ; 1.375      ;
+; 0.412 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 0.500        ; 1.258      ; 1.378      ;
+; 0.412 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 0.500        ; 1.255      ; 1.375      ;
+; 0.412 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 0.500        ; 1.255      ; 1.375      ;
+; 0.868 ; reset     ; state.IDLE                 ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.868 ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.868 ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.868 ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.868 ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.868 ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 1.000        ; 1.148      ; 1.312      ;
+; 0.912 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 1.000        ; 1.255      ; 1.375      ;
+; 0.912 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 1.000        ; 1.255      ; 1.375      ;
+; 0.912 ; reset     ; state.STOPPED              ; reset        ; clk         ; 1.000        ; 1.255      ; 1.375      ;
+; 0.912 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 1.000        ; 1.258      ; 1.378      ;
+; 0.912 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 1.000        ; 1.255      ; 1.375      ;
+; 0.912 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 1.000        ; 1.255      ; 1.375      ;
++-------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                             ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.032 ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; 0.000        ; 1.255      ; 1.375      ;
+; -0.032 ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; 0.000        ; 1.255      ; 1.375      ;
+; -0.032 ; reset     ; state.STOPPED              ; reset        ; clk         ; 0.000        ; 1.255      ; 1.375      ;
+; -0.032 ; reset     ; state.MOVING_UP            ; reset        ; clk         ; 0.000        ; 1.258      ; 1.378      ;
+; -0.032 ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; 0.000        ; 1.255      ; 1.375      ;
+; -0.032 ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; 0.000        ; 1.255      ; 1.375      ;
+; 0.012  ; reset     ; state.IDLE                 ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.012  ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.012  ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.012  ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.012  ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.012  ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; 0.000        ; 1.148      ; 1.312      ;
+; 0.468  ; reset     ; floor_pos_reg[2]           ; reset        ; clk         ; -0.500       ; 1.255      ; 1.375      ;
+; 0.468  ; reset     ; floor_pos_reg[3]           ; reset        ; clk         ; -0.500       ; 1.255      ; 1.375      ;
+; 0.468  ; reset     ; state.STOPPED              ; reset        ; clk         ; -0.500       ; 1.255      ; 1.375      ;
+; 0.468  ; reset     ; state.MOVING_UP            ; reset        ; clk         ; -0.500       ; 1.258      ; 1.378      ;
+; 0.468  ; reset     ; state.MOVING_DOWN          ; reset        ; clk         ; -0.500       ; 1.255      ; 1.375      ;
+; 0.468  ; reset     ; floor_pos_reg[0]           ; reset        ; clk         ; -0.500       ; 1.255      ; 1.375      ;
+; 0.512  ; reset     ; state.IDLE                 ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
+; 0.512  ; reset     ; floor_pos_reg[1]           ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
+; 0.512  ; reset     ; floor_pos[0]~reg0_emulated ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
+; 0.512  ; reset     ; floor_pos[1]~reg0_emulated ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
+; 0.512  ; reset     ; floor_pos[2]~reg0_emulated ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
+; 0.512  ; reset     ; floor_pos[3]~reg0_emulated ; reset        ; clk         ; -0.500       ; 1.148      ; 1.312      ;
++--------+-----------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                         ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[0]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[0]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[1]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[1]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[2]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[2]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[3]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[3]~reg0_emulated     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.IDLE                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.IDLE                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_DOWN              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_DOWN              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_UP                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_UP                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; state.STOPPED                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; state.STOPPED                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[0]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[0]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[1]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[1]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[2]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[2]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos[3]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos[3]~reg0_emulated|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[0]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[1]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[2]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; floor_pos_reg[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; floor_pos_reg[3]|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.IDLE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.IDLE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_DOWN|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_DOWN|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.MOVING_UP|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.MOVING_UP|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; state.STOPPED|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; state.STOPPED|clk              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'reset'                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; reset ; Rise       ; reset                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[0]~1        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[0]~1        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[0]~1|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[0]~1|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[1]~5        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[1]~5        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[1]~5|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[1]~5|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[2]~9        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[2]~9        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[2]~9|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[2]~9|datac  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Fall       ; floor_pos[3]~13       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Fall       ; floor_pos[3]~13       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; floor_pos[3]~13|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; floor_pos[3]~13|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reset ; Rise       ; reset|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reset ; Rise       ; reset|combout         ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_req[*]  ; clk        ; 1.765 ; 1.765 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; 1.538 ; 1.538 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; 1.689 ; 1.689 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; 1.765 ; 1.765 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; 1.393 ; 1.393 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_req[*]  ; clk        ; -0.819 ; -0.819 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; -0.943 ; -0.943 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; -1.133 ; -1.133 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; -1.083 ; -1.083 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; -0.819 ; -0.819 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 5.457 ; 5.457 ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 4.757 ; 4.757 ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 5.230 ; 5.230 ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 5.454 ; 5.454 ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 5.457 ; 5.457 ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 7.037 ; 7.037 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 6.441 ; 6.441 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 6.936 ; 6.936 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 7.037 ; 7.037 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 6.757 ; 6.757 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 7.037 ; 7.037 ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 6.441 ; 6.441 ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 6.936 ; 6.936 ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 7.037 ; 7.037 ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 6.757 ; 6.757 ; Fall       ; reset           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 5.083 ; 5.083 ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 5.048 ; 5.048 ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 4.770 ; 4.770 ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 6.441 ; 6.441 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 6.441 ; 6.441 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 6.936 ; 6.936 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 7.037 ; 7.037 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 6.757 ; 6.757 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 4.312 ; 4.312 ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 4.312 ; 4.312 ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 4.856 ; 4.856 ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 4.758 ; 4.758 ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 4.480 ; 4.480 ; Fall       ; reset           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.821  ; 0.215 ; 0.257    ; -0.051  ; -1.222              ;
+;  clk             ; -1.760  ; 0.215 ; 0.257    ; -0.051  ; -1.222              ;
+;  reset           ; -1.821  ; 1.028 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -18.715 ; 0.0   ; 0.0      ; -0.301  ; -14.444             ;
+;  clk             ; -11.907 ; 0.000 ; 0.000    ; -0.301  ; -13.222             ;
+;  reset           ; -6.808  ; 0.000 ; N/A      ; N/A     ; -1.222              ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_req[*]  ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; 3.495 ; 3.495 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; 3.761 ; 3.761 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; 3.855 ; 3.855 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; 3.201 ; 3.201 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_req[*]  ; clk        ; -0.819 ; -0.819 ; Rise       ; clk             ;
+;  floor_req[0] ; clk        ; -0.943 ; -0.943 ; Rise       ; clk             ;
+;  floor_req[1] ; clk        ; -1.133 ; -1.133 ; Rise       ; clk             ;
+;  floor_req[2] ; clk        ; -1.083 ; -1.083 ; Rise       ; clk             ;
+;  floor_req[3] ; clk        ; -0.819 ; -0.819 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 10.665 ; 10.665 ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 9.030  ; 9.030  ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 10.227 ; 10.227 ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 10.589 ; 10.589 ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 10.665 ; 10.665 ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 12.932 ; 12.932 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 11.637 ; 11.637 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 12.868 ; 12.868 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 12.932 ; 12.932 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 12.421 ; 12.421 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 12.932 ; 12.932 ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 11.637 ; 11.637 ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 12.868 ; 12.868 ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 12.932 ; 12.932 ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 12.421 ; 12.421 ; Fall       ; reset           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; floor_pos[*]  ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  floor_pos[0] ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  floor_pos[1] ; clk        ; 5.083 ; 5.083 ; Rise       ; clk             ;
+;  floor_pos[2] ; clk        ; 5.048 ; 5.048 ; Rise       ; clk             ;
+;  floor_pos[3] ; clk        ; 4.770 ; 4.770 ; Rise       ; clk             ;
+; floor_pos[*]  ; reset      ; 6.441 ; 6.441 ; Rise       ; reset           ;
+;  floor_pos[0] ; reset      ; 6.441 ; 6.441 ; Rise       ; reset           ;
+;  floor_pos[1] ; reset      ; 6.936 ; 6.936 ; Rise       ; reset           ;
+;  floor_pos[2] ; reset      ; 7.037 ; 7.037 ; Rise       ; reset           ;
+;  floor_pos[3] ; reset      ; 6.757 ; 6.757 ; Rise       ; reset           ;
+; floor_pos[*]  ; reset      ; 4.312 ; 4.312 ; Fall       ; reset           ;
+;  floor_pos[0] ; reset      ; 4.312 ; 4.312 ; Fall       ; reset           ;
+;  floor_pos[1] ; reset      ; 4.856 ; 4.856 ; Fall       ; reset           ;
+;  floor_pos[2] ; reset      ; 4.758 ; 4.758 ; Fall       ; reset           ;
+;  floor_pos[3] ; reset      ; 4.480 ; 4.480 ; Fall       ; reset           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 105      ; 0        ; 0        ; 0        ;
+; reset      ; clk      ; 0        ; 4        ; 0        ; 0        ;
+; clk        ; reset    ; 0        ; 0        ; 4        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 105      ; 0        ; 0        ; 0        ;
+; reset      ; clk      ; 0        ; 4        ; 0        ; 0        ;
+; clk        ; reset    ; 0        ; 0        ; 4        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; reset      ; clk      ; 12       ; 12       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; reset      ; clk      ; 12       ; 12       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 36    ; 36   ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 09 13:50:39 2023
+Info: Command: quartus_sta Elevator -c Elevator
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Elevator.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name reset reset
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.821
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.821        -6.808 reset 
+    Info (332119):    -1.760       -11.907 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+    Info (332119):     1.402         0.000 reset 
+Info (332146): Worst-case recovery slack is 0.257
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.257         0.000 clk 
+Info (332146): Worst-case removal slack is -0.051
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.051        -0.301 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -13.222 clk 
+    Info (332119):    -1.222        -1.222 reset 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.644
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.644        -2.326 reset 
+    Info (332119):    -0.235        -0.663 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+    Info (332119):     1.028         0.000 reset 
+Info (332146): Worst-case recovery slack is 0.368
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.368         0.000 clk 
+Info (332146): Worst-case removal slack is -0.032
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.032        -0.192 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -13.222 clk 
+    Info (332119):    -1.222        -1.222 reset 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4540 megabytes
+    Info: Processing ended: Thu Nov 09 13:50:39 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

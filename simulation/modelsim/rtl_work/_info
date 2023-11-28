@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\MTech_Sem1\ADSD_lab\SA\simulation\modelsim
+vElevator
+!i10b 1
+!s100 =?]W=eal28Ud_:gmCJ8mH1
+IZllC>Om4G1VKn?J7D>0he2
+VB;e:`3ZT3:E>X2fQQkZOd0
+Z1 dD:\MTech_Sem1\ADSD_lab\SA\simulation\modelsim
+w1699517732
+8D:/MTech_Sem1/ADSD_lab/SA/Elevator.v
+FD:/MTech_Sem1/ADSD_lab/SA/Elevator.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1699517907.503000
+!s107 D:/MTech_Sem1/ADSD_lab/SA/Elevator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/MTech_Sem1/ADSD_lab/SA|D:/MTech_Sem1/ADSD_lab/SA/Elevator.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+D:/MTech_Sem1/ADSD_lab/SA -O0
+n@elevator

@@ -1,0 +1,41 @@
+|Elevator
+clk => floor_pos[0]~reg0.CLK
+clk => floor_pos[1]~reg0.CLK
+clk => floor_pos[2]~reg0.CLK
+clk => floor_pos[3]~reg0.CLK
+clk => floor_pos_reg[0].CLK
+clk => floor_pos_reg[1].CLK
+clk => floor_pos_reg[2].CLK
+clk => floor_pos_reg[3].CLK
+clk => state~5.DATAIN
+reset => floor_pos[0]~reg0.ALOAD
+reset => floor_pos[1]~reg0.ALOAD
+reset => floor_pos[2]~reg0.ALOAD
+reset => floor_pos[3]~reg0.ALOAD
+reset => floor_pos_reg[0].ACLR
+reset => floor_pos_reg[1].ACLR
+reset => floor_pos_reg[2].ACLR
+reset => floor_pos_reg[3].ACLR
+reset => state~7.DATAIN
+floor_req[0] => LessThan0.IN4
+floor_req[0] => LessThan1.IN4
+floor_req[0] => Equal1.IN3
+floor_req[0] => Equal0.IN3
+floor_req[1] => LessThan0.IN3
+floor_req[1] => LessThan1.IN3
+floor_req[1] => Equal1.IN2
+floor_req[1] => Equal0.IN2
+floor_req[2] => LessThan0.IN2
+floor_req[2] => LessThan1.IN2
+floor_req[2] => Equal1.IN1
+floor_req[2] => Equal0.IN1
+floor_req[3] => LessThan0.IN1
+floor_req[3] => LessThan1.IN1
+floor_req[3] => Equal1.IN0
+floor_req[3] => Equal0.IN0
+floor_pos[0] <= floor_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+floor_pos[1] <= floor_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+floor_pos[2] <= floor_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+floor_pos[3] <= floor_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
